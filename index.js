@@ -92,7 +92,10 @@ const Resort = {
                     res.status(404).json({ error: "Resort not found" });
                 }
             }
-            catch (error) { res.status(500).json({ error: `Failed to delete resort with ID ${id}: ${error}` }); }
+            catch (error) {
+                res.status(500).json
+                ({ error: `Failed to delete resort with ID ${id}: ${error}` });
+            }
         },
 };
 // Define routes 
